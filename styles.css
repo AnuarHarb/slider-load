@@ -10,10 +10,6 @@
   width: 0.1px;
 }
 
-.full {
-  width: 100%;
-}
-
 main {
   margin-top: 150px;
   text-align: center;
@@ -50,4 +46,14 @@ main button:hover {
 
 main button:focus {
   outline: none;
+}
+
+#awesome {
+  display: none;
+  text-align: center;
+  width: 100%;
+}
+
+.awesome img {
+  width: 400px;
 }

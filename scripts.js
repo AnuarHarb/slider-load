@@ -3,7 +3,7 @@
 
   let loader = document.getElementsByClassName('loader')[0];
   document.getElementById('load').addEventListener("click", function() {
-    loadFunction(0);
+    loadProgress(0);
   });
 
   // Transition
@@ -20,13 +20,17 @@
 
   // Random transition time for animation
   function loadSpeed() {
-    let transitionTime = Math.ceil(Math.random()*10);
+    let transitionTime = Math.ceil(Math.random()*8);
     return transitionTime;
   }
 
   // Random Progress
   function loadProgress(stepWidth) {
     if (stepWidth >= 100) {
+      let awesome = document.getElementById('awesome')
+      let load = document.getElementById('load')
+      awesome.style.display = "block";
+      load.innerHTML = "yey!";
       console.log('finish');
     }else {
       let nextWidth = stepWidth + Math.round(Math.random()*(100 - stepWidth));
