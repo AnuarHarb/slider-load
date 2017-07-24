@@ -1,7 +1,12 @@
 (function(){
   'use strict'
 
-  let loader = document.getElementsByClassName('loader')[0];
+  // Init DOM variables
+  const awesome = document.getElementById('awesome')
+  const load = document.getElementById('load')
+  const loader = document.getElementsByClassName('loader')[0];
+
+  // Intit load button listener
   document.getElementById('load').addEventListener("click", function() {
     loadProgress(0);
   });
@@ -27,8 +32,6 @@
   // Random Progress
   function loadProgress(stepWidth) {
     if (stepWidth >= 100) {
-      let awesome = document.getElementById('awesome')
-      let load = document.getElementById('load')
       awesome.style.display = "block";
       load.innerHTML = "yey!";
       console.log('finish');
